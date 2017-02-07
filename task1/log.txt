@@ -1,0 +1,11 @@
+commit 989cf24971b3deae3a324e60cbec3debc712e656
+Author: VictoriyaSmirnova <vikaaaaasmir@gmail.com>
+Date:   Tue Feb 7 23:16:54 2017 +0300
+
+    add status.txt
+
+commit fa4cb969b16af16f541f15f40589391769947545
+Author: VictoriyaSmirnova <vikaaaaasmir@gmail.com>
+Date:   Tue Feb 7 23:14:27 2017 +0300
+
+    add .gitignore
