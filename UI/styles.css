@@ -1,0 +1,108 @@
+header{
+    display:inline-block;
+    background-color: cadetblue;
+    width: 100%;
+
+}
+body{
+    background-color: antiquewhite;
+}
+#out{
+    text-align: right;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+#filter{
+    margin-top: 30px;
+    background-color: cadetblue;
+    width: 200px;
+    padding: 10px;
+    position: fixed;
+    float: left;
+
+}
+#portal {
+    font-family: "Sitka Banner";
+    font-size: 30px;
+    text-align: left;
+    vertical-align: middle;
+
+}
+h3 {
+    font-family: "Sitka Banner";
+    font-size: 15px;
+}
+.sign_in{
+    background-color: cadetblue;
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+#line{
+    display: inline;
+}
+#news{
+    background-color: cadetblue;
+    border: 1px solid black;
+    font-size: 20px;
+
+}
+.tags{
+    color: cadetblue;
+}
+#head{
+    font-family: "Berlin Sans FB";
+}
+#author{
+    position: inherit;
+    top: 140px;
+    left: 400px;
+
+}
+.leftstr, .rightstr{
+
+    margin: 0px;
+}
+.clearRight{
+    clear: right;
+}
+.newsSize{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.clear{
+    clear: left;
+}
+.newsTable{
+    /*width: 950px;*/
+    display: inline-block;
+    /*height: 200px;*/
+    border: 5px solid cadetblue;
+    margin-left: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+
+#clearLeft{
+    clear: left;
+}
+#show{
+    margin-top: 20px;
+    text-align: right;
+}
+#button_show{
+    background-color: cadetblue;
+    border: 1px solid black;
+}
+footer{
+    background-color: cadetblue;
+    text-align: center;
+    padding: 10px;
+    bottom:0px;
+    margin-top: 20px;
+    height: 80px;
+}
