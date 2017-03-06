@@ -273,27 +273,22 @@ function addArticle(article) {
     }
     return false;
 }
-function editArticle(id, article) {
+function editArticle(id,article) {
     var _article;
-    if((_article = getArticle(id)) === undefined)
-    	return false;
-    if(article.title !== undefined) 
-    	_article.title = article.title;
-    if(article.summary !== undefined) 
-    	_article.summary = article.summary;
-    if(article.content !== undefined) 
-    	_article.content = article.content;
-    if(article.tags !== undefined) 
-    	_article.tags = article.tags;
-    if(validateArticle(_article) === true){
+    if((_article = getArticle(id)) === undefined) return false;
+    if(article.title !== undefined) _article.title = article.title;
+    if(article.summary !== undefined) _article.summary = article.summary;
+    if(article.content !== undefined) _article.content = article.content;
+    if(article.tags !== undefined) _article.tags = article.tags;
+    if(validateArticle(_article)){
         getArticle(id).title = _article.title;
         getArticle(id).summary = _article.summary;
         getArticle(id).content = _article.content;
         getArticle(id).tags = _article.tags;
         return true;
     }
-    return true;
-}
+    return false;
+};
 function removeArticle(id) {
     var del;
     for (var i = 0; i < articles.length; i++) {
@@ -344,10 +339,9 @@ console.log(addArticle({title:'Заглавие новости', id:'24', summar
 console.log(addArticle({title:'Заглавие новости', id:'25', summary:'Краткое описание', author: 'Иванов Иван', tags:['мода'], createdAt: new Date('2016-02-27T23:00:00'), content:'Текст новости'}));
 console.log(articles);
 
-console.log(editArticle('16', {title: 'Минское «Динамо»', summary:'Краткое описание', tags: ['спорт'], content: 'Гости создали больше опасных моментов.'}));
+console.log(editArticle('16', {title: 'Минское «Динамо» обыграло ярославский «Локомотив»', summary: 'Минское «Динамо» обыграло ярославский «Локомотив» в четвертом матче первого раунда плей-офф КХЛ — 4:2', content: 'Гости создали больше опасных м'}));
 console.log(editArticle('50', {title: 'Минское «Динамо»', tags: ['спорт'], content: 'Гости создали больше опасных моментов.'}));
 console.log(editArticle('16', {title: 'Минское «Динамо»', tags: ['культутра']}));
-console.log(editArticle('16', {title: 'Минское «Динамо»', tags: ['мода']}));
 console.log(articles);
 
 console.log(removeArticle('1'));
