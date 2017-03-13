@@ -21,6 +21,9 @@ body{
     float: left;
 
 }
+#user-name{
+    font-size: 20px;
+}
 #portal {
     font-family: "Sitka Banner";
     font-size: 30px;
@@ -32,7 +35,7 @@ h3 {
     font-family: "Sitka Banner";
     font-size: 15px;
 }
-.sign_in{
+#sign-in{
     background-color: cadetblue;
     border: 1px solid black;
     margin-left: 15px;
@@ -41,13 +44,13 @@ h3 {
 #line{
     display: inline;
 }
-#news{
+.news{
     background-color: cadetblue;
     border: 1px solid black;
     font-size: 20px;
 
 }
-.tags{
+.news-tags{
     color: cadetblue;
 }
 #head{
@@ -59,21 +62,21 @@ h3 {
     left: 400px;
 
 }
-.leftstr, .rightstr{
+.news-author, .news-date{
 
     margin: 0px;
 }
 .clearRight{
     clear: right;
 }
-.newsSize{
+.news-title{
     margin-top: 7px;
     margin-bottom: 7px;
 }
 .clear{
     clear: left;
 }
-.newsTable{
+.news-table{
     /*width: 950px;*/
     display: inline-block;
     /*height: 200px;*/
@@ -94,15 +97,16 @@ h3 {
     margin-top: 20px;
     text-align: right;
 }
-#button_show{
+#button-show{
     background-color: cadetblue;
     border: 1px solid black;
 }
-footer{
+.footer{
+
     background-color: cadetblue;
     text-align: center;
     padding: 10px;
-    bottom:0px;
+    bottom:5px;
     margin-top: 20px;
-    height: 80px;
+
 }
