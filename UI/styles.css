@@ -6,6 +6,11 @@ header{
 }
 body{
     background-color: antiquewhite;
+    margin-bottom: 120px;
+    height: 100%;
+}
+html{
+    height: 100%;
 }
 #out{
     text-align: right;
@@ -13,7 +18,7 @@ body{
     padding-bottom: 50px;
 }
 #filter{
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: cadetblue;
     width: 200px;
     padding: 10px;
@@ -36,6 +41,12 @@ h3 {
     font-size: 15px;
 }
 #sign-in{
+    background-color: cadetblue;
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+#exit{
     background-color: cadetblue;
     border: 1px solid black;
     margin-left: 15px;
@@ -100,13 +111,48 @@ h3 {
 #button-show{
     background-color: cadetblue;
     border: 1px solid black;
+    margin-bottom: 20px;
 }
-.footer{
+footer{
 
     background-color: cadetblue;
     text-align: center;
-    padding: 10px;
-    bottom:5px;
-    margin-top: 20px;
+    margin-top: 10px;
+    flex: 0 0 auto;
+
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+#add-news{
+    /*width: 950px;*/
+    display: inline-block;
+    /*height: 200px;*/
+    border: 5px solid cadetblue;
+    margin-left: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 20px;
+    padding: 20px;
+}
+.article_full{
+    /*width: 950px;*/
+    display: inline-block;
+    /*height: 200px;*/
+    border: 5px solid cadetblue;
+    margin-left: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 20px;
+    padding-left: 10px;
 
 }
