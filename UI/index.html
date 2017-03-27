@@ -3,70 +3,105 @@
 <head>
     <script src="https://use.fontawesome.com/bbc107b405.js"></script>
 
-    <link rel="stylesheet"  type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="utf-8">
     <title>Новостной портал</title>
 </head>
 <body>
+<div class="wrapper">
     <header class="user">
         <h1 id="portal"><i class="fa fa-graduation-cap" aria-hidden="true"></i>НОВОСТНОЙ ПОРТАЛ</h1>
         <h3 id="user-name"><i class="fa fa-user" aria-hidden="true"></i></h3>
-        <form>
-            <button id="sign-in">Выйти</button>
-        </form>
+        <button id="exit" style="display: none">Выйти</button>
+        <button id="sign-in">Выйти</button><br>
+        <input id="log" type="text" placeholder="Логин">
+        <input id="password" type="text" placeholder="Пароль">
+
     </header>
-    <form id="filter">
-        <button class="news">Добавить новость</button>
-        <p><b>Фильтр: </b></p>
-        <p>Теги:<br> <input list="tags" size="23">
-        <datalist id="tags">
-            <option class="option">Спорт</option>
-        <p>Имя автора:<br><input type="text" name="name" size="23"> </p>
-        <p>Дата:</p>
-        <p>с:<br><input type="datetime-local"></p>
-        <p>по:<br><input type="datetime-local"></p>
-
-
-
+    <div class="content">
+        <div id="filter">
+            <button class="news" style="display: none">Добавить новость</button>
+            <p><b>Фильтр: </b></p>
+            <p>Теги:<br> <input list="tags">
+                <datalist id="tags">
+                    <option class="option">спорт</option>
+            <p>Имя автора:<br><input id="author" type="text" name="name"></p>
+            <p>Дата:</p>
+            <p>с:<br><input id="begin-date" type="date"></p>
+            <p>по:<br><input id="end-date" type="date"></p>
             </datalist>
-        </p>
-        <p style="text-align: center"><button>Найти</button>
-    </form>
-    <div class="clearRight"></div>
+            </p>
+            <p style="text-align: center">
+                <button id="search">Найти</button>
+            </p>
+        </div>
 
-    <div class="article-list">
-    </div>
-    <div id="show">
-        <form>
+        <div class="clearRight"></div>
+        <div class="article-list"></div>
+        <div id="add-news" style="display: none">
+            <p>Название</p><br>
+            <textarea id="title" type="text" cols="140"></textarea>
+            <p>Краткое описание</p><br>
+            <textarea id="summary" type="text" cols="140" rows="5"></textarea>
+            <p>Текст новости</p><br>
+            <textarea id="text" type="text" cols="140" rows="7"></textarea>
+            <p>Теги</p><br>
+            <input id="tag" type="text" maxlength="50" size="50">
+            <button id="add-news-form">Добавить</button>
+        </div>
+
+
+        <div id="show">
             <button id="button-show">Показать больше</button>
-        </form>
-    </div>
-    <div class="clearLeft"></div>
-    <div class="footer" >
+        </div>
+
+        <div class="clearLeft"></div>
+</div>
+
+    <footer>
         <p>Новостной портал | Смирнова Виктория | 2 курс 7 группа</p>
         <p>vikaaaaasmir@gmail.com | Дата последнего изменения: 25.02.2017</p>
+    </footer>
+</div>
+
+<template id="template-news">
+    <div class="news-table" data-id="id">
+        <h1 class="news-title">Легендарная гимнастка Ольга Корбут продала олимпийские медали за 230 тысяч долларов
+        </h1>
+        <p class="news-author">Имя автора</p>
+        <p class="news-date">Дата и время</p>
+        <div class="clear"></div>
+        <p class="news-summary">Как уже сообщалось, гимнастка Ольга Корбут выставила на аукцион пять медалей,
+            завоеванных ею на Олимпийских играх 1972 и 1976 года. За их продажу она выручила 230 тысяч долларов.
+        </p>
+        <p class="news-tags">Спорт</p>
+
+        <button class="show-news" >Показать полностью</button>
+        <button id="edit" style="display: none">Редактировать</button>
+        <button id="delete" style="display: none">Удалить</button>
+
     </div>
-    <template id="template-news">
-        <div class="news-table" data-id="id">
-            <h1 class="news-title">Легендарная гимнастка Ольга Корбут продала олимпийские медали за 230 тысяч долларов
-            </h1>
-            <p class="news-author">Имя автора</p>
-            <p class="news-date">Дата и время</p>
-            <div class="clear"></div>
-            <p class="news-summary">Как уже сообщалось, гимнастка Ольга Корбут выставила на аукцион пять медалей,
-                завоеванных ею на Олимпийских играх 1972 и 1976 года. За их продажу она выручила 230 тысяч долларов.
-            </p>
-            <p class="news-tags">Спорт</p>
-            <form id="buttons">
-                <button>Показать полностью</button>
-                <button>Редактировать</button>
-                <button>Удалить</button>
-            </form>
-        </div>
-    </template>
-    <template id="template-tag">
-        <option class="tag-name">Спорт</option>
-    </template>
-    <script src="script.js"></script>
+</template>
+<template id="template-tag">
+    <option class="tag-name">Спорт</option>
+</template>
+
+<template id="template_full_article">
+    <div class="article_full" data-id="id_article">
+        <h1 class="news-title1">Легендарная гимнастка Ольга Корбут продала олимпийские медали за 230 тысяч долларов
+        </h1>
+        <p class="news-author1">Имя автора</p>
+        <p class="news-date1">Дата и время</p>
+        <div class="clear"></div>
+        <p class="news-text">Как уже сообщалось, гимнастка Ольга Корбут выставила на аукцион пять медалей,
+            завоеванных ею на Олимпийских играх 1972 и 1976 года. За их продажу она выручила 230 тысяч долларов.
+        </p>
+        <p class="news-tags1">cпорт</p>
+
+        <button id="edit1">Редактировать</button>
+        <button id="delete1" onclick="deleteClicked(event)">Удалить</button>
+    </div>
+</template>
+<script src="script.js"></script>
 </body>
 </html>
